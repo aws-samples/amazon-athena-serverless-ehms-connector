@@ -1,4 +1,4 @@
-# AthenaLocalHiveMetastore
+## Athena Embedded Hive Metastore
 This project is an implementation of https://github.com/awslabs/aws-athena-hive-metastore. 
 It uses Embedded Hive metastore client to connect to RDS Hive metastore directly from Athena/Lambda without the need for an EMR cluster or Thrift server. To make this approach truly serverless, it is highly recommended that an S3 location is chosen as Hive meta warehouse. 
 The source code includes the reference project implementation code and it is a Maven project with the following modules.
@@ -49,3 +49,11 @@ hive.metastore.response.spill.location=s3://my-hms/lambda/functions/spill
 ```
 
 4) Create a Hive Metastore data connector and provide this Lambda function 
+
+## Security
+
+See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
+
+## License
+
+This library is licensed under the MIT-0 License. See the LICENSE file.
