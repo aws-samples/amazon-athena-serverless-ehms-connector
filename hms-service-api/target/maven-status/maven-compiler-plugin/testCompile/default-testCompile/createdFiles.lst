@@ -1,0 +1,2 @@
+com/amazonaws/athena/hms/TestApiHelper.class
+com/amazonaws/athena/hms/serde/MetadataSerializationTest.class

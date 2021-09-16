@@ -1,0 +1,4 @@
+/Users/vasveena/Documents/workspace/amazon-athena-serverless-ehms-connector/hms-lambda-handler/src/test/java/com/amazonaws/athena/hms/TestApiNameHandlerProvider.java
+/Users/vasveena/Documents/workspace/amazon-athena-serverless-ehms-connector/hms-lambda-handler/src/test/java/com/amazonaws/athena/hms/TestGetPartitionsHandler.java
+/Users/vasveena/Documents/workspace/amazon-athena-serverless-ehms-connector/hms-lambda-handler/src/test/java/com/amazonaws/athena/hms/TestPaginator.java
+/Users/vasveena/Documents/workspace/amazon-athena-serverless-ehms-connector/hms-lambda-handler/src/test/java/com/amazonaws/athena/hms/TestHiveMetaStoreConf.java

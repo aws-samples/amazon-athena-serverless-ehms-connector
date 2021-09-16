@@ -1,0 +1,6 @@
+com/amazonaws/athena/HiveMetaStoreLambdaReplayFunc.class
+com/amazonaws/athena/MockHiveMetaStoreClientFactory.class
+com/amazonaws/athena/MockHiveMetaStoreConf.class
+com/amazonaws/athena/HiveMetaStoreLambdaRecordFunc.class
+com/amazonaws/athena/HiveMetaStoreRnPBaseLambdaFunc.class
+com/amazonaws/athena/RNPMode.class

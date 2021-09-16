@@ -1,0 +1,5 @@
+com/amazonaws/athena/hms/TestPaginator.class
+com/amazonaws/athena/hms/TestHiveMetaStoreConf.class
+com/amazonaws/athena/hms/TestApiNameHandlerProvider.class
+com/amazonaws/athena/hms/TestGetPartitionsHandler.class
+com/amazonaws/athena/hms/TestPaginator$StringPaginator.class
