@@ -22,6 +22,7 @@ package com.amazonaws.athena.hms.handler;
 import com.amazonaws.athena.hms.CreateTableRequest;
 import com.amazonaws.athena.hms.CreateTableResponse;
 import com.amazonaws.athena.hms.HiveMetaStoreConf;
+import com.amazonaws.athena.hms.S3ASchemeUpdater;
 import com.amazonaws.services.lambda.runtime.Context;
 import org.apache.hadoop.hive.metastore.api.Table;
 import org.apache.thrift.TDeserializer;
@@ -45,6 +46,9 @@ public class CreateTableHandler extends BaseHMSHandler<CreateTableRequest, Creat
       TDeserializer deserializer = new TDeserializer(getTProtocolFactory());
       Table table = new Table();
       deserializer.fromString(table, request.getTableDesc());
+      if (S3ASchemeUpdater.isTableUsingS3Scheme(table)) {
+        S3ASchemeUpdater.updateTableToUseS3AScheme(table);
+      }
       client.createTable(table);
       boolean successful = true;
       context.getLogger().log("Created table: " + successful);
