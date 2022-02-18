@@ -46,6 +46,12 @@ public class CreateTableHandler extends BaseHMSHandler<CreateTableRequest, Creat
       TDeserializer deserializer = new TDeserializer(getTProtocolFactory());
       Table table = new Table();
       deserializer.fromString(table, request.getTableDesc());
+      /*
+      Convert s3 location to use s3a scheme in order to use S3AFileSystem.
+      1. We cannot support s3a scheme from Athena console as it enables broader audience which is not ideal.
+      2. Get table doesn't use file system and other action uses location from table storage descriptor
+         when the table was first created.
+       */
       if (S3ASchemeUpdater.isTableUsingS3Scheme(table)) {
         S3ASchemeUpdater.updateTableToUseS3AScheme(table);
       }
