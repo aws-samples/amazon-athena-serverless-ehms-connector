@@ -175,6 +175,11 @@ public class HiveMetaStoreConf
 
     System.out.println("Initializing configurations for warehouse: " +metaWarehouse);
 
+    conf.set("fs.s3a.access.key", System.getenv("AWS_ACCESS_KEY_ID"));
+    conf.set("fs.s3a.secret.key", System.getenv("AWS_SECRET_ACCESS_KEY"));
+    conf.set("fs.s3a.session.token", System.getenv("AWS_SESSION_TOKEN"));
+    conf.set("fs.s3a.aws.credentials.provider", "org.apache.hadoop.fs.s3a.TemporaryAWSCredentialsProvider");
+
     conf.setVar(HiveConf.ConfVars.METASTORE_CONNECTION_USER_NAME, connectionUserName);
     conf.setVar(HiveConf.ConfVars.METASTOREPWD, connectionPassword);
     conf.setVar(HiveConf.ConfVars.METASTORECONNECTURLKEY, connectionURL);
